@@ -1,0 +1,153 @@
+.profile {
+  display: flex;
+  background-color: #202020;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 70px;
+}
+
+.profile__header {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  margin-top: 74px;
+}
+
+.profile__form {
+  display: flex;
+  width: 410px;
+  flex-direction: column;
+  margin-top: 123px;
+}
+
+.profile__input {
+  width: 141px;
+  background-color: #202020;
+  border: none;
+  color: #fff;
+  text-align: left;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__input::placeholder {
+  color: #fff;
+  text-align: left;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile__line {
+  width: 100%;
+  height: 1px;
+  background-color: #424242;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.profile__input-container {
+  position: relative;
+  width: 410px;
+}
+
+.profile__input-result {
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  top: 3px;
+  right: 0;
+  margin: 0;
+  width: 122px;
+  text-align: right;
+}
+
+.profile__change {
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #202020;
+  border: none;
+  margin-top: 252px;
+}
+
+.profile__exit {
+  color: #ee3465;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: #202020;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 850px) {
+  .profile__header {
+    margin-top: 236px;
+  }
+
+  .profile__form {
+    margin-top: 75px;
+  }
+
+  .profile__change {
+    margin-top: 200px;
+  }
+
+  .profile {
+    padding-bottom: 268px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile__input-container {
+    position: relative;
+    width: 260px;
+  }
+  .profile__form {
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+  }
+
+  .profile__header {
+    margin-top: 70px;
+  }
+
+  .profile__form {
+    margin-top: 60px;
+  }
+
+  .profile__change {
+    margin-top: 370px;
+  }
+
+  .profile {
+    padding-bottom: 40px;
+  }
+
+  .profile__exit {
+    font-size: 12px;
+  }
+
+  .profile__change {
+    font-size: 12px;
+  }
+}

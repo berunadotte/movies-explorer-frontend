@@ -1,0 +1,135 @@
+.navigation__button {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  width: 76px;
+  height: 32px;
+  background-color: #3ddc84;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation__link {
+  color: #fff;
+  text-align: right;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-left: auto;
+}
+
+.navigation__link:hover {
+  opacity: 0.8;
+  transition: opacity 1s;
+}
+
+.link__container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 80px;
+  gap: 16px;
+}
+
+.navigation__link-movies {
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  transition: opacity 1s;
+  cursor: pointer;
+}
+
+.navigation__link-movies:hover {
+  opacity: 0.8;
+}
+
+.navigation__link-movies_active {
+  font-weight: 500;
+}
+
+.navigation__link-movies:nth-child(2) {
+  margin-right: 20px;
+}
+
+.profile__link {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  width: 100px;
+  height: 32px;
+  background-color: #313131;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 70px;
+}
+
+.profile__link:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navigation__menu {
+  display: none;
+}
+
+.navigation__cross {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .navigation__button {
+    margin-right: 30px;
+  }
+
+  .navigation__link-movies {
+    display: none;
+  }
+
+  .navigation__menu {
+    display: block;
+    margin-right: 30px;
+    margin-left: auto;
+    z-index: 4;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .navigation__button {
+    margin-right: 14px;
+  }
+
+  .navigation__button {
+    font-size: 10px;
+    width: 54px;
+    height: 26px;
+  }
+
+  .navigation__link {
+    font-size: 10px;
+  }
+
+  .navigation__link {
+    margin-right: 14px;
+  }
+
+  .navigation__menu {
+    width: 37px;
+    height: 43px;
+    margin-right: 18px;
+  }
+}

@@ -1,0 +1,58 @@
+.nav-menu-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 4;
+}
+
+.nav-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  height: 100%;
+  width: 67.35vw;
+  z-index: 3;
+  background-color: #202020;
+}
+
+.nav-menu__text {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  z-index: 3;
+  margin: 0;
+  padding-bottom: 4px;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+.nav-menu__text_active {
+  border-bottom: 2px solid white;
+}
+
+.nav-menu__cross {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  z-index: 5;
+  display: block;
+  margin-top: 22.4px;
+  margin-right: 22.4px;
+  margin-left: auto;
+  margin-bottom: 105.44px;
+}
+
+.profile__link_menu {
+  margin-left: 70px;
+  margin-top: 621px;
+}
