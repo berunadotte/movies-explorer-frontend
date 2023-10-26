@@ -20,7 +20,7 @@ function Register() {
     buttonNames = ["Войти", "Еще не зарегистрированы?", " Регистрация"];
     title = "Рады видеть!";
     inputs = [
-      { title: "E-mail", type: "e-mail" },
+      { title: "E-mail", type: "email" },
       { title: "Пароль", type: "password" },
     ];
   } else if (location.pathname === "/signup") {
@@ -29,7 +29,7 @@ function Register() {
     title = "Добро пожаловать!";
     inputs = [
       { title: "Имя", type: "text" },
-      { title: "E-mail", type: "e-mail" },
+      { title: "E-mail", type: "email" },
       { title: "Пароль", type: "password" },
     ];
   }
@@ -63,7 +63,7 @@ function Register() {
           return (
             <React.Fragment key={i}>
               <p className="register__input-title">{input.title}</p>
-              <input type={input.type} className="register__input" />
+              <input type={input.type} className="register__input" required min="2" max="30" />
             </React.Fragment>
           );
         })}

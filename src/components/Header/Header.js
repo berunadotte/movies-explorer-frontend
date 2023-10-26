@@ -12,12 +12,14 @@ function Header() {
 
   return (
     <header className="header">
+      <a className="header__link" href="/">
       <img
         className="header__image"
         src={greenCirle}
         alt="зеленый круг"
         onClick={onNavigateMain}
       />
+      </a>
       <Navigation />
     </header>
   );

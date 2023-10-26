@@ -10,6 +10,7 @@
   border-radius: 3px;
   border: none;
   cursor: pointer;
+  margin-right: 70px;
 }
 
 .navigation__link {
@@ -28,7 +29,7 @@
 
 .navigation__link:hover {
   opacity: 0.8;
-  transition: opacity 1s;
+  transition: opacity 0.2s;
 }
 
 .link__container {
@@ -45,12 +46,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  transition: opacity 1s;
+  transition: opacity 0.2s;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .navigation__link-movies:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .navigation__link-movies_active {
@@ -59,6 +61,17 @@
 
 .navigation__link-movies:nth-child(2) {
   margin-right: 20px;
+}
+
+.navigation__menu_button {
+  display: none;
+  padding: 0;
+  border: none;
+}
+
+.navigation__menu_button:hover {
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 .profile__link {
@@ -75,6 +88,7 @@
   align-items: center;
   justify-content: center;
   margin-right: 70px;
+  text-decoration: none;
 }
 
 .profile__link:hover {
@@ -96,6 +110,10 @@
     margin-right: 30px;
   }
 
+  .profile__link {
+  display: none;
+  }
+
   .navigation__link-movies {
     display: none;
   }
@@ -105,6 +123,11 @@
     margin-right: 30px;
     margin-left: auto;
     z-index: 4;
+  }
+
+  .navigation__menu_button {
+    display: block;
+    background: none;
   }
 }
 

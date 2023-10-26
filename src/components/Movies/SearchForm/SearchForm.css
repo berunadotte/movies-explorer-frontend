@@ -13,7 +13,7 @@
 .search__form {
   width: 100%;
   display: flex;
-  margin-top: 90px;
+  margin-top: 80px;
   align-items: center;
   justify-content: space-between;
 }
@@ -29,9 +29,12 @@
   box-sizing: border-box;
 }
 
+.search__input:focus {
+  outline: 2px solid #3DDC84;
+}
+
 .search__input::placeholder {
   color: #8b8b8b;
-  font-feature-settings: "clig" off, "liga" off;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -50,6 +53,16 @@
   margin-left: 10px;
 }
 
+.search__button:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.search__tumb_button:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
 .search__text {
   color: #fff;
   font-size: 12px;
@@ -63,11 +76,20 @@
 .search__tumb-container {
   display: flex;
   flex-direction: row;
-  margin-top: 38px;
+  margin-top: 28px;
   justify-content: center;
   align-items: flex-end;
-  cursor: pointer;
   width: 100%;
+}
+
+.search__tumb_button {
+  padding: 0;
+  width: 36px;
+  height: 20px;
+  border: none;
+  display: block;
+  background-image: url("../../../images/smalltumb.svg");
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .search__line {
@@ -91,6 +113,10 @@
     margin-top: 50px;
     margin-bottom: 10px;
   }
+
+  .search__tumb-container {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -100,11 +126,27 @@
   }
 
   .search__input::placeholder {
-    font-size: 11px;
+    font-size: 14px;
+  }
+
+  .search__input {
+    width: 85%;
+    height: 44px;
+    padding-left: 22px;
+    border-radius: 8px;
+    padding-left: 14px;
   }
 
   .search__text {
     font-size: 11px;
     line-height: 18px;
+  }
+
+  .search__tumb-container {
+    margin-top: 44px;
+  }
+
+  .search__button {
+    margin-left: 8px;
   }
 }

@@ -11,7 +11,14 @@ const Footer = () => {
       <div className="footer__line" />
       <div className="footer__container">
         <p className="footer__text footer__text_type_year">©2023</p>
-        <p className="footer__text">Яндекс.Практикум</p>
+        <a
+          className="footer__text footer__text_type_link"
+          href="https://practicum.yandex.ru/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Яндекс.Практикум
+        </a>
         <a
           className="footer__github"
           href="https://github.com/berunadotte"

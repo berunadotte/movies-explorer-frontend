@@ -31,9 +31,11 @@ const Profile = () => {
         <button type="button" className="profile__change">
           Редактировать
         </button>
-        <button type="button" className="profile__exit" onClick={logOut}>
-          Выйти из аккаунта
-        </button>
+        <a className="profile__exit_link" href="/">
+          <button type="button" className="profile__exit" onClick={logOut}>
+            Выйти из аккаунта
+          </button>
+        </a>
       </section>
     </>
   );

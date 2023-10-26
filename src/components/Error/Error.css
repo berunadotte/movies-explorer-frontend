@@ -1,6 +1,5 @@
 .error {
-  width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: #202020;
 }
 
@@ -27,6 +26,7 @@
 }
 
 .error__link {
+  display: block;
   color: #4285f4;
   text-align: center;
   font-size: 14px;
@@ -35,8 +35,9 @@
   line-height: normal;
   transition: opacity 1s;
   cursor: pointer;
-  margin: 0;
+  margin-bottom: 60px;
   padding-top: 184px;
+  text-decoration: none;
 }
 
 .error__link:hover {

@@ -52,38 +52,46 @@ const Navigation = () => {
     navigationContent = (
       <>
         <div className="link__container">
-          <p
+          <a
             className={
               location.pathname === "/movies"
                 ? "navigation__link-movies navigation__link-movies_active"
                 : "navigation__link-movies"
             }
             onClick={onNavigateFilms}
+            href="/movies"
           >
             Фильмы
-          </p>
-          <p
+          </a>
+          <a
             className={
               location.pathname === "/saved-movies"
                 ? "navigation__link-movies navigation__link-movies_active"
                 : "navigation__link-movies"
             }
             onClick={onNavigateSavedFilms}
+            href="/saved-movies"
           >
             Сохранённые фильмы
-          </p>
+          </a>
         </div>
-        <p className="profile__link" onClick={onNavigateProfile}>
+        <a
+          className="profile__link"
+          onClick={onNavigateProfile}
+          href="/profile"
+        >
           Аккаунт
-        </p>
+        </a>
 
         {!menuOpen ? (
-          <img
-            className="navigation__menu"
-            src={menu}
-            alt="меню"
-            onClick={onMenuOpen}
-          />
+          <button className="navigation__menu_button">
+            <img
+              className="navigation__menu"
+              src={menu}
+              alt="меню"
+              onClick={onMenuOpen}
+            />
+          </button>
         ) : (
           <NavMenu onMenuClose={onMenuClose} />
         )}

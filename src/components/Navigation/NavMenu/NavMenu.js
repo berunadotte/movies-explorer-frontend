@@ -1,7 +1,6 @@
 import React from "react";
 import "./NavMenu.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import cross from "../../../images/cross_menu.svg";
 
 const NavMenu = ({ onMenuClose }) => {
   const navigate = useNavigate();
@@ -24,41 +23,43 @@ const NavMenu = ({ onMenuClose }) => {
   return (
     <div className="nav-menu-container">
       <div className="nav-menu">
-        <img
-          src={cross}
-          alt="закрыть"
-          className="nav-menu__cross"
+        <button
+          className="nav-menu__button-close"
           onClick={onMenuClose}
-        />
-        <p className="nav-menu__text" onClick={onNavigateMain}>
+        ></button>
+
+        <a className="nav-menu__text" onClick={onNavigateMain} href="/">
           Главная
-        </p>
-        <p
+        </a>
+        <a
           className={
             location.pathname === "/movies"
               ? "nav-menu__text nav-menu__text_active"
               : "nav-menu__text"
           }
           onClick={onNavigateMovies}
+          href="/movies"
         >
           Фильмы
-        </p>
-        <p
+        </a>
+        <a
           className={
             location.pathname === "/saved-movies"
               ? "nav-menu__text nav-menu__text_active"
               : "nav-menu__text"
           }
           onClick={onNavigateSavedMovies}
+          href="/saved-movies"
         >
           Сохранённые фильмы
-        </p>
-        <p
-          className="profile__link profile__link_menu"
+        </a>
+        <a
+          className="profile__link_menu"
           onClick={onNavigateProfile}
+          href="/profile"
         >
           Аккаунт
-        </p>
+        </a>
       </div>
     </div>
   );

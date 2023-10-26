@@ -21,7 +21,7 @@
   display: flex;
   width: 410px;
   flex-direction: column;
-  margin-top: 123px;
+  margin-top: 121px;
 }
 
 .profile__input {
@@ -49,8 +49,8 @@
   width: 100%;
   height: 1px;
   background-color: #424242;
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 13px;
+  margin-bottom: 14px;
 }
 
 .profile__input-container {
@@ -82,7 +82,7 @@
   line-height: normal;
   background-color: #202020;
   border: none;
-  margin-top: 252px;
+  margin-top: 218px;
 }
 
 .profile__exit {
@@ -96,6 +96,7 @@
   border: none;
   cursor: pointer;
   margin-top: 16px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 850px) {
@@ -104,11 +105,11 @@
   }
 
   .profile__form {
-    margin-top: 75px;
+    margin-top: 95px;
   }
 
   .profile__change {
-    margin-top: 200px;
+    margin-top: 206px;
   }
 
   .profile {
@@ -132,11 +133,11 @@
   }
 
   .profile__form {
-    margin-top: 60px;
+    margin-top: 76px;
   }
 
   .profile__change {
-    margin-top: 370px;
+    margin-top: 380px;
   }
 
   .profile {

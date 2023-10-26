@@ -13,7 +13,9 @@
 .movie-card__description-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 14px;
+  margin-top: 12px;
+  margin-left: 14px;
+  margin-right: 14px;
   height: 24px;
 }
 
@@ -66,13 +68,11 @@
   transform: translate(-35px, 14px);
 }
 
-@media screen and (max-width: 450px) {
-  .movie-card__description {
-    font-size: 12px;
-  }
-
-  .movie-card {
-    max-width: 300px;
+@media screen and (max-width: 850px) {
+  .movie-card__description-container {
+    margin-top: 23px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -83,5 +83,9 @@
 
   .movie-card {
     max-width: 300px;
+  }
+
+  .movie-card__description-container {
+    margin-top: 12px;
   }
 }

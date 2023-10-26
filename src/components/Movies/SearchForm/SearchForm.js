@@ -1,6 +1,5 @@
 import React from "react";
 import "./SearchForm.css";
-import tumb from "../../../images/smalltumb.svg";
 import "../../Main/AboutMe/AboutMe.css";
 import "../../Main/AboutProject/AboutProject.css";
 
@@ -12,7 +11,7 @@ function SearchForm() {
         <button type="button" className="search__button"></button>
       </form>
       <div className="search__tumb-container">
-        <img className="search__tumb" src={tumb} alt="переключатель" />
+        <button className="search__tumb_button"/>
         <p className="search__text">Короткометражки</p>
       </div>
       <div className="search__line" />

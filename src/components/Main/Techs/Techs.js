@@ -1,13 +1,13 @@
-import React from "react";
-import "./Techs.css";
-import "../AboutProject/AboutProject.css";
+import React from 'react';
+import './Techs.css';
+import '../AboutProject/AboutProject.css';
 
 const Techs = () => {
-  const techs = ["HTML", "CSS", "JS", "React", "Git", "Express.js", "mongoDB"];
+  const techs = ['HTML', 'CSS', 'JS', 'React', 'Git', 'Express.js', 'mongoDB']
 
   return (
     <section className="techs">
-      <h3 id="technologies" className="title">
+      <h3 id="technologies" className="section__title">
         Технологии
       </h3>
       <div className="line" />
@@ -19,7 +19,8 @@ const Techs = () => {
       <div className="techs__container">
         {techs.map((tech) => {
           return <div className="tech__name">{tech}</div>;
-        })}
+        }
+        )}
       </div>
     </section>
   );
