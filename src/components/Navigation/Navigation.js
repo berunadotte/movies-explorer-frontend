@@ -36,11 +36,11 @@ const Navigation = () => {
   if (location.pathname === "/") {
     navigationContent = (
       <>
-        <p className="navigation__link" onClick={onNavigateRegister}>
+        <p className="header__navigation-link" onClick={onNavigateRegister}>
           Регистрация
         </p>
         <button
-          className="navigation__button"
+          className="header__navigation-button"
           type="button"
           onClick={onNavigateLogin}
         >
@@ -55,8 +55,8 @@ const Navigation = () => {
           <a
             className={
               location.pathname === "/movies"
-                ? "navigation__link-movies navigation__link-movies_active"
-                : "navigation__link-movies"
+                ? "header__navigation-link-movies header__navigation-link-movies_active"
+                : "header__navigation-link-movies"
             }
             onClick={onNavigateFilms}
             href="/movies"
@@ -66,8 +66,8 @@ const Navigation = () => {
           <a
             className={
               location.pathname === "/saved-movies"
-                ? "navigation__link-movies navigation__link-movies_active"
-                : "navigation__link-movies"
+                ? "header__navigation-link-movies header__navigation-link-movies_active"
+                : "header__navigation-link-movies"
             }
             onClick={onNavigateSavedFilms}
             href="/saved-movies"
@@ -84,9 +84,9 @@ const Navigation = () => {
         </a>
 
         {!menuOpen ? (
-          <button className="navigation__menu_button">
+          <button className="header__navigation-menu_button">
             <img
-              className="navigation__menu"
+              className="header__navigation-menu"
               src={menu}
               alt="меню"
               onClick={onMenuOpen}

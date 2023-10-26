@@ -20,17 +20,17 @@ function Register() {
     buttonNames = ["Войти", "Еще не зарегистрированы?", " Регистрация"];
     title = "Рады видеть!";
     inputs = [
-      { title: "E-mail", type: "email" },
-      { title: "Пароль", type: "password" },
+      { title: "E-mail", type: "email", placeholder: "e-mail" },
+      { title: "Пароль", type: "password", placeholder: "пароль" },
     ];
   } else if (location.pathname === "/signup") {
     loginOrRegisterButton = "register__button";
     buttonNames = ["Зарегистрироваться", "Уже зарегистрированы?", " Войти"];
     title = "Добро пожаловать!";
     inputs = [
-      { title: "Имя", type: "text" },
-      { title: "E-mail", type: "email" },
-      { title: "Пароль", type: "password" },
+      { title: "Имя", type: "text", placeholder: "имя" },
+      { title: "E-mail", type: "email", placeholder: "e-mail" },
+      { title: "Пароль", type: "password", placeholder: "пароль" },
     ];
   }
 
@@ -63,7 +63,14 @@ function Register() {
           return (
             <React.Fragment key={i}>
               <p className="register__input-title">{input.title}</p>
-              <input type={input.type} className="register__input" required min="2" max="30" />
+              <input
+                type={input.type}
+                className="register__input"
+                required
+                minLength="2"
+                maxLength="30"
+                placeholder={` Введите ${input.placeholder}`}
+              />
             </React.Fragment>
           );
         })}

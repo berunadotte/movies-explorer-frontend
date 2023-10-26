@@ -1,4 +1,4 @@
-.navigation__button {
+.header__navigation-button {
   color: #000;
   font-size: 12px;
   font-style: normal;
@@ -13,7 +13,7 @@
   margin-right: 70px;
 }
 
-.navigation__link {
+.header__navigation-link {
   color: #fff;
   text-align: right;
   font-family: Inter;
@@ -27,7 +27,7 @@
   margin-left: auto;
 }
 
-.navigation__link:hover {
+.header__navigation-link:hover {
   opacity: 0.8;
   transition: opacity 0.2s;
 }
@@ -39,7 +39,7 @@
   gap: 16px;
 }
 
-.navigation__link-movies {
+.header__navigation-link-movies {
   color: #fff;
   text-align: center;
   font-size: 13px;
@@ -51,25 +51,25 @@
   text-decoration: none;
 }
 
-.navigation__link-movies:hover {
+.header__navigation-link-movies:hover {
   opacity: 0.7;
 }
 
-.navigation__link-movies_active {
+.header__navigation-link-movies_active {
   font-weight: 500;
 }
 
-.navigation__link-movies:nth-child(2) {
+.header__navigation-link-movies:nth-child(2) {
   margin-right: 20px;
 }
 
-.navigation__menu_button {
+.header__navigation-menu_button {
   display: none;
   padding: 0;
   border: none;
 }
 
-.navigation__menu_button:hover {
+.header__navigation-menu_button:hover {
   opacity: 0.7;
   transition: 0.2s;
 }
@@ -97,16 +97,16 @@
   transition: 0.2s;
 }
 
-.navigation__menu {
+.header__navigation-menu {
   display: none;
 }
 
-.navigation__cross {
+.header__navigation-cross {
   display: none;
 }
 
 @media screen and (max-width: 850px) {
-  .navigation__button {
+  .header__navigation-button {
     margin-right: 30px;
   }
 
@@ -114,43 +114,43 @@
   display: none;
   }
 
-  .navigation__link-movies {
+  .header__navigation-link-movies {
     display: none;
   }
 
-  .navigation__menu {
+  .header__navigation-menu {
     display: block;
     margin-right: 30px;
     margin-left: auto;
     z-index: 4;
   }
 
-  .navigation__menu_button {
+  .header__navigation-menu_button {
     display: block;
     background: none;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .navigation__button {
+  .header__navigation-button {
     margin-right: 14px;
   }
 
-  .navigation__button {
+  .header__navigation-button {
     font-size: 10px;
     width: 54px;
     height: 26px;
   }
 
-  .navigation__link {
+  .header__navigation-link {
     font-size: 10px;
   }
 
-  .navigation__link {
+  .header__navigation-link {
     margin-right: 14px;
   }
 
-  .navigation__menu {
+  .header__navigation-menu {
     width: 37px;
     height: 43px;
     margin-right: 18px;

@@ -61,6 +61,10 @@
   outline: 2px solid #3DDC84;
 }
 
+.register__input::placeholder {
+  text-transform: initial;
+}
+
 .register__button {
   position: static;
   width: 100%;

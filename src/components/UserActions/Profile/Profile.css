@@ -99,6 +99,23 @@
   text-decoration: none;
 }
 
+.profile__save-button {
+  width: 33%;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #4285f4;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  border: none;
+  margin-top: 223px;
+}
+
 @media screen and (max-width: 850px) {
   .profile__header {
     margin-top: 236px;
@@ -114,6 +131,10 @@
 
   .profile {
     padding-bottom: 268px;
+  }
+
+  .profile__save-button {
+    width: 50%;
   }
 }
 

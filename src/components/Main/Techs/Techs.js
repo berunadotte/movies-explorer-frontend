@@ -7,7 +7,7 @@ const Techs = () => {
 
   return (
     <section className="techs">
-      <h3 id="technologies" className="section__title">
+      <h3 id="technologies" className="techs__section-title">
         Технологии
       </h3>
       <div className="line" />
@@ -18,7 +18,7 @@ const Techs = () => {
       </p>
       <div className="techs__container">
         {techs.map((tech) => {
-          return <div className="tech__name">{tech}</div>;
+          return <div className="techs__name">{tech}</div>;
         }
         )}
       </div>

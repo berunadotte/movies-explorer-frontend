@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../Header/Header";
 import "./Profile.css";
@@ -8,6 +8,15 @@ const Profile = () => {
   const logOut = () => {
     navigate("/");
   };
+
+  const [saveButton, setSaveButton] = useState(false);
+  const onChangeButton = () => {
+    setSaveButton(true);
+  };
+  const onSaveButton = () => {
+    setSaveButton(false);
+  };
+
   return (
     <>
       <Header />
@@ -28,14 +37,32 @@ const Profile = () => {
             <p className="profile__input-result">pochta@yandex.ru</p>
           </div>
         </form>
-        <button type="button" className="profile__change">
-          Редактировать
-        </button>
-        <a className="profile__exit_link" href="/">
-          <button type="button" className="profile__exit" onClick={logOut}>
-            Выйти из аккаунта
-          </button>
-        </a>
+        {!saveButton ? (
+          <>
+            <button
+              type="button"
+              className="profile__change"
+              onClick={onChangeButton}
+            >
+              Редактировать
+            </button>
+            <a className="profile__exit_link" href="/">
+              <button type="button" className="profile__exit" onClick={logOut}>
+                Выйти из аккаунта
+              </button>
+            </a>
+          </>
+        ) : (
+          <>
+            <button
+              type="button"
+              onClick={onSaveButton}
+              className="profile__save-button"
+            >
+              Сохранить
+            </button>
+          </>
+        )}
       </section>
     </>
   );

@@ -10,7 +10,7 @@ import SavedMovies from "../SavedMovies/SavedMovies";
 
 function App() {
   return (
-    <div className="app_container">
+    <>
       <Routes>
         <Route path="/signup" element={<Register />} />
         <Route path="/signin" element={<Login />} />
@@ -20,7 +20,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Error />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
