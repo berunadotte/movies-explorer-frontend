@@ -90,6 +90,7 @@
   display: block;
   background-image: url("../../../images/smalltumb.svg");
   background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
 
 .search__line {
