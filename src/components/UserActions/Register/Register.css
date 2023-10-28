@@ -1,0 +1,175 @@
+.register {
+  display: flex;
+  background-color: #202020;
+  justify-content: center;
+  padding-bottom: 70px;
+}
+
+.register__container {
+  width: 396px;
+}
+
+.register__logo {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 70px;
+  margin-bottom: 36px;
+}
+
+.register__logo:hover {
+  opacity: 0.7;
+}
+
+.register__title {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.register__input-title {
+  color: #8b8b8b;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+
+.register__input {
+  color: #fff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #2f2f2f;
+  border: none;
+  width: 366px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.register__input:focus {
+  outline: 2px solid #3DDC84;
+}
+
+.register__input::placeholder {
+  text-transform: initial;
+}
+
+.register__button {
+  position: static;
+  width: 100%;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #4285f4;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-top: 71px;
+}
+
+.login__button_margin {
+  margin-top: 159px;
+}
+
+.register__text {
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.register__text_color_blue {
+  color: #4285f4;
+  cursor: pointer;
+  transition: opacity 1s;
+}
+
+.register__text_color_blue:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 850px) {
+  .register__logo {
+    margin-top: 232px;
+    margin-bottom: 36px;
+  }
+
+  .register__button {
+    margin-top: 72px;
+  }
+
+  .login__button_margin {
+    margin-top: 159px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .register__logo {
+    margin-top: 56px;
+    margin-bottom: 50px;
+  }
+
+  .register__container {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .register__title {
+    margin-bottom: 80px;
+  }
+
+  .register__input-title {
+    align-self: flex-start;
+  }
+
+  .register__input {
+    align-self: flex-start;
+  }
+
+  .register__text {
+    display: flex;
+    font-size: 12px;
+  }
+
+  .register__text_color_blue {
+    margin-top: 0;
+    margin-left: 7px;
+  }
+
+  .register__input {
+    width: 230px;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .register__button {
+    margin-top: 160px;
+  }
+
+  .login__button_margin {
+    margin-top: 246px;
+  }
+}
