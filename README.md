@@ -6,3 +6,7 @@
 
 ## Ссылка на backend: 
 * https://api.movies.berunadotte.nomoredomainsrocks.ru/
+
+
+## Ссылка на пуллреквест frontend:
+https://github.com/berunadotte/movies-explorer-frontend/pull/2
