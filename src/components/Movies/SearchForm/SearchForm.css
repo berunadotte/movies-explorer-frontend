@@ -88,9 +88,17 @@
   height: 20px;
   border: none;
   display: block;
-  background-image: url("../../../images/smalltumb.svg");
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+}
+
+.search__tumb_button_type_on {
+  background-image: url("../../../images/smalltumb.svg");
+
+}
+
+.search__tumb_button_type_off {
+  background-image: url("../../../images/smalltumboff.svg");
 }
 
 .search__line {

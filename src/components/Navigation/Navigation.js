@@ -33,7 +33,8 @@ const Navigation = () => {
   };
 
   let navigationContent;
-  if (location.pathname === "/") {
+  if (location.pathname === "/" &&
+  localStorage.getItem('validated') !== 'false') {
     navigationContent = (
       <>
         <p className="header__navigation-link" onClick={onNavigateRegister}>
