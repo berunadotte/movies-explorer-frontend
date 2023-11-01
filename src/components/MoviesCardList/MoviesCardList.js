@@ -73,10 +73,6 @@ const MoviesCardList = ({
     };
   }, [clickCounter, screenWidth]);
 
-  // const reRenderCard = {
-
-  // }
-
   const renderMovies = (movies, maxMoviesToShow, savedFilteredMovies) => {
     if (movies !== "" && Array.isArray(movies)) {
       const slicedMovies =
@@ -103,7 +99,6 @@ const MoviesCardList = ({
               : movie.image
           }
           trailerLink={movie.trailerLink}
-          // reRenderCard={reRenderCard}
         />
       ));
     }

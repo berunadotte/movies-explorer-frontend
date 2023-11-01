@@ -60,9 +60,6 @@ const Profile = ({ updateContextValue }) => {
     setSaveButton(true);
     setValues({ name: resultName, email });
   };
-  const onSaveButton = () => {
-    setSaveButton(false);
-  };
 
   const onSubmitInfo = (e) => {
     const token = localStorage.getItem('jwt')
