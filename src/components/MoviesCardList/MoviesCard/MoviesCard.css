@@ -1,13 +1,15 @@
+.movie-card {
+  position: relative;
+  width: 360px;
+  height: 233px
+}
+
 .movie-card__pic {
   width: 100%;
   height: auto;
-  max-height: 201px;
+  height: 201px;
   flex-shrink: 0;
   border-radius: 5px;
-}
-
-.movie-card__pic:hover {
-  cursor: pointer;
 }
 
 .movie-card__description-container {
@@ -46,26 +48,65 @@
 }
 
 .movie-card__icon {
-  position: absolute;
   display: none;
-  margin-right: 0;
-}
-
-.movie-card__pic:hover + .movie-card__icon {
-  display: inline;
 }
 
 .movie-card__icon:hover {
+  display: block;
+  position: absolute;
+  transform: translate(275px, -192px);
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.movie-card__link:hover + .movie-card__icon {
+  display: block;
+  position: absolute;
+  transform: translate(275px, -192px);
+  z-index: 2;
+}
+
+.movie-card__link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.movie-card__link:hover {
   display: inline;
   cursor: pointer;
 }
 
 .icon_save {
-  transform: translate(-86px, 14px);
+  display: block;
+  transform: translate(326px, -190px);
 }
 
-.icon_delete {
-  transform: translate(-35px, 14px);
+.icon_saved {
+  display: block;
+  transform: translate(326px, -190px);
+}
+
+.icon_saved:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.movie-card__link:hover + .icon_delete {
+  display: block;
+  position: absolute;
+  transform: translate(326px, -190px);
+  z-index: 2;
+}
+
+.icon_delete:hover {
+  display: block;
+  position: absolute;
+  transform: translate(326px, -190px);
+  z-index: 2;
 }
 
 @media screen and (max-width: 850px) {

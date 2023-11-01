@@ -1,0 +1,14 @@
+.movies__error{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 550px;
+  padding: 0 30px;
+  margin: 0;
+  background-color: #202020;
+}
+
+.movies__error_message{
+  color: #fff;
+  margin: 0;
+}

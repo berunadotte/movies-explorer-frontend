@@ -46,7 +46,7 @@
   height: 44px;
   width: 44px;
   border: none;
-  background-image: url("../../../images/find.svg");
+  background-image: url("../../images/find.svg");
   cursor: pointer;
   background-color: #2f2f2f;
   padding: 0;
@@ -88,9 +88,17 @@
   height: 20px;
   border: none;
   display: block;
-  background-image: url("../../../images/smalltumb.svg");
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+}
+
+.search__tumb_button_type_on {
+  background-image: url("../../images/smalltumb.svg");
+
+}
+
+.search__tumb_button_type_off {
+  background-image: url("../../images/smalltumboff.svg");
 }
 
 .search__line {
