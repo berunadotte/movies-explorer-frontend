@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import MoviesCard from "../MoviesCard/MoviesCard";
+import MoviesCard from "../Movies/MoviesCard/MoviesCard";
 import "./MoviesCardList.css";
 
-const MoviesCardList = ({   searchedMovies,
+const MoviesCardList = ({
+  searchedMovies,
   clickCounter,
   setClickCounter,
   savedMovies,
@@ -11,8 +12,8 @@ const MoviesCardList = ({   searchedMovies,
   searchedSavedMovies,
   isSearched,
   deleteMovie,
-  onSearchedSavedMovies }) => {
-
+  onSearchedSavedMovies,
+}) => {
   const location = useLocation();
 
   const [maxMoviesToShow, setMaxMoviesToShow] = useState(null);
@@ -27,7 +28,7 @@ const MoviesCardList = ({   searchedMovies,
     } else {
       setMaxMoviesToShow(5);
     }
-  }
+  };
 
   const [elseButton, setElseButton] = useState(false);
 
@@ -36,7 +37,7 @@ const MoviesCardList = ({   searchedMovies,
       const slicedMovies = moviesList.slice(0, maxMoviesToShow);
       if (maxMoviesToShow > slicedMovies.length) {
         setElseButton(false);
-      } else if (location.pathname === '/movies') setElseButton(true);
+      } else if (location.pathname === "/movies") setElseButton(true);
     },
     [maxMoviesToShow, location.pathname]
   );
@@ -53,10 +54,10 @@ const MoviesCardList = ({   searchedMovies,
   };
 
   useEffect(() => {
-    if (location.pathname === '/movies' && searchedMovies !== '') {
+    if (location.pathname === "/movies" && searchedMovies !== "") {
       renderElseButton(searchedMovies);
     }
-  }, [searchedMovies, maxMoviesToShow, location.pathname, renderElseButton])
+  }, [searchedMovies, maxMoviesToShow, location.pathname, renderElseButton]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -66,42 +67,47 @@ const MoviesCardList = ({   searchedMovies,
       }
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [clickCounter, screenWidth]);
 
+  // const reRenderCard = {
+
+  // }
 
   const renderMovies = (movies, maxMoviesToShow, savedFilteredMovies) => {
-    if (movies !== '' && Array.isArray(movies)) {
+    if (movies !== "" && Array.isArray(movies)) {
       const slicedMovies =
-        location.pathname === '/movies'
+        location.pathname === "/movies"
           ? movies.slice(0, maxMoviesToShow)
           : movies;
       return slicedMovies.map((movie, index) => (
         <MoviesCard
-          searchedSavedMovies= { searchedSavedMovies }
-          onSearchedSavedMovies= { onSearchedSavedMovies }
-          isSaved= { movie.saved }
-          savedMovies= { savedMovies }
-          deleteMovie= { deleteMovie }
-          movieId= { location.pathname === '/movies' ? movie.id : movie.movieId }
-          savedFilteredMovies= { savedFilteredMovies }
-          key= { index }
-          movieName= { movie.nameRU }
-          movieDuration= { `${Math.floor(movie.duration / 60)}ч ${
-            movie.duration - Math.floor(movie.duration / 60) * 60}м`}
-          moviePicture= {
-            location.pathname === '/movies'
+          searchedSavedMovies={searchedSavedMovies}
+          onSearchedSavedMovies={onSearchedSavedMovies}
+          isSaved={movie.saved}
+          savedMovies={savedMovies}
+          deleteMovie={deleteMovie}
+          movieId={location.pathname === "/movies" ? movie.id : movie.movieId}
+          savedFilteredMovies={savedFilteredMovies}
+          key={index}
+          movieName={movie.nameRU}
+          movieDuration={`${Math.floor(movie.duration / 60)}ч ${
+            movie.duration - Math.floor(movie.duration / 60) * 60
+          }м`}
+          moviePicture={
+            location.pathname === "/movies"
               ? `https://api.nomoreparties.co/${movie.image.url}`
               : movie.image
           }
           trailerLink={movie.trailerLink}
+          // reRenderCard={reRenderCard}
         />
       ));
+    }
   };
-}
 
   return (
     <section className="movies">
@@ -109,13 +115,17 @@ const MoviesCardList = ({   searchedMovies,
         {location.pathname === "/movies"
           ? renderMovies(searchedMovies, maxMoviesToShow, savedFilteredMovies)
           : !isSearched
-            ? renderMovies(savedMovies, maxMoviesToShow)
-            : renderMovies(searchedSavedMovies, maxMoviesToShow)}
+          ? renderMovies(savedMovies, maxMoviesToShow)
+          : renderMovies(searchedSavedMovies, maxMoviesToShow)}
       </div>
       <div className="movies-container_button-container">
         <div>
           {elseButton && (
-            <button className="movies-container__button" type="button" onClick={onClickElseButton}>
+            <button
+              className="movies-container__button"
+              type="button"
+              onClick={onClickElseButton}
+            >
               Ещё
             </button>
           )}

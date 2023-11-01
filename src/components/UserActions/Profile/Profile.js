@@ -167,7 +167,6 @@ const Profile = ({ updateContextValue }) => {
             </div>
           )}
         </form>
-        {!saveButton ? (
           <>
             <button
               type="button"
@@ -180,17 +179,6 @@ const Profile = ({ updateContextValue }) => {
                 Выйти из аккаунта
               </button>
           </>
-        ) : (
-          <>
-            <button
-              type="button"
-              onClick={onSaveButton}
-              className="profile__save-button"
-            >
-              Сохранить
-            </button>
-          </>
-        )}
       </section>
       {popupState && <Popup message={popupMessage} />}
     </>

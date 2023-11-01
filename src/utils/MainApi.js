@@ -11,7 +11,6 @@ class ApiMain {
   }
 
   _request(url, options) {
-    console.log(url, options)
     const updatedOptions = {
       ...options,
     };

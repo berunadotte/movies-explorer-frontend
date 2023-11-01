@@ -7,7 +7,7 @@ import greenCirle from "../../../images/logo.svg";
 import "./Register.css";
 import { regexName } from '../../../utils/constants'
 
-function Register({ onLoggedIn, updateContextValue }) {
+function Register({ updateContextValue }) {
   const location = useLocation();
 
   const [serverErrors, setServerErrors] = useState(null);
@@ -102,7 +102,6 @@ function Register({ onLoggedIn, updateContextValue }) {
               apiMain.getUser(res.token)
               .then((res) => updateContextValue(res))
               .then(() => {
-                onLoggedIn();
                 localStorage.setItem("validated", true);
                 navigate("/movies");
               })
@@ -135,7 +134,6 @@ function Register({ onLoggedIn, updateContextValue }) {
         .then((res) => {
           updateContextValue(res)})
           .then(() => {
-            onLoggedIn();
             localStorage.setItem("validated", true);
             navigate("/movies")
           })

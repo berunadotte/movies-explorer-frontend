@@ -89,6 +89,12 @@
   transform: translate(326px, -190px);
 }
 
+.icon_saved:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
 .movie-card__link:hover + .icon_delete {
   display: block;
   position: absolute;
