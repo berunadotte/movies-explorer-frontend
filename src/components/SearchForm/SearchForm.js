@@ -1,9 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import useFormValidation from "../../../hooks/useForm";
+import useFormValidation from "../../hooks/useForm";
 import "./SearchForm.css";
-import "../../Main/AboutMe/AboutMe.css";
-import "../../Main/AboutProject/AboutProject.css";
+import "../Main/AboutMe/AboutMe.css";
+import "../Main/AboutProject/AboutProject.css";
 
 function SearchForm({
   onSubmitSearch,
