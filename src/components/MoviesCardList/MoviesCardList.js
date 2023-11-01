@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import MoviesCard from "../Movies/MoviesCard/MoviesCard";
+import MoviesCard from "./MoviesCard/MoviesCard";
 import "./MoviesCardList.css";
 
 const MoviesCardList = ({
